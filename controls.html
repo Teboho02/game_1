@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Controls - Haunted Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        /* Body and Background */
+        body {
+            font-family: 'Creepster', cursive;
+            background: url('./spooky_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f8f8f8;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Header */
+        h1 {
+            text-align: center;
+            color: #ff6666;
+            font-size: 48px;
+            text-shadow: 2px 2px 12px rgba(255, 0, 0, 0.8);
+            margin-bottom: 30px;
+        }
+
+        /* Control Section */
+        .control-section {
+            background-color: rgba(20, 20, 20, 0.85);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+        }
+        
+        .control-section h2 {
+            color: #ffcccc;
+            font-size: 28px;
+            text-shadow: 1px 1px 8px rgba(255, 0, 0, 0.7);
+            margin-bottom: 15px;
+        }
+
+        /* Key Styles */
+        .key {
+            background-color: rgba(60, 0, 0, 0.9);
+            color: #ffdddd;
+            padding: 6px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+        }
+        
+        /* Paragraph Text */
+        p {
+            font-size: 18px;
+            color: #e0e0e0;
+            margin: 5px 0;
+        }
+        #btn{
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 220px;
+            background-color: rgba(255, 0, 0, 0.6);
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Controls</h1>
+    
+    <div class="control-section">
+        <h2>Movement</h2>
+        <p><span class="key">W</span> Move Forward</p>
+        <p><span class="key">S</span> Move Backward</p>
+        <p><span class="key">A</span> Move Left</p>
+        <p><span class="key">D</span> Move Right</p>
+    </div>
+    
+    <div class="control-section">
+        <h2>Special Functions</h2>
+        <p><span class="key">F</span> Toggle Flashlight On/Off</p>
+        <p><span class="key">C</span> Switch Camera Mode (First/Third Person)</p>
+    </div>
+    
+    <div class="control-section">
+        <h2>Inventory</h2>
+        <p><span class="key">1</span> Switch to Gun</p>
+        <p><span class="key">2</span> Switch to Medkit</p>
+    </div>
+    <button id="btn">Close</button>
+    <script>
+        // Close the Instructions Screen
+        document.getElementById('btn').addEventListener('click', () => {
+          window.location.href = "./index.html"; 
+        });
+      </script>
+</body>
+</html>
